@@ -28,7 +28,7 @@ class guiapp(QtGui.QMainWindow, cursortest.Ui_Dialog):
         self.needclear = False
 
         self.canvas.setVisible(True)
-        cid2 = self.canvas.mpl_connect('motion_notify_event', self.onmove)
+        cid2 = self.canvas.mpl_connect('button_press_event', self.onmove)
 
     def setupfigure(self):
         self.fig = Figure()
